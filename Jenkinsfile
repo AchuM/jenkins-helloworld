@@ -39,7 +39,7 @@ pipeline {
         steps {
             /*testing node'"*/
             kubectl create secret docker-registry secret --docker-server=jed.ocir.io --docker-username='ax96vm4vpc0w/achuabebe' --docker-password='y4II8;-A5TI_eZRtNIWQ' --docker-email='achu@lendoapp.com'
-            sh 'sudo docker login -u 'ax96vm4vpc0w/achuabebe' -p 'y4II8;-A5TI_eZRtNIWQ' jed.ocir.io'
+            sh 'sudo docker login -u 'ax96vm4vpc0w' -p 'y4II8;-A5TI_eZRtNIWQ' jed.ocir.io'
             sh 'kubectl apply -f /var/lib/jenkins/hello.yml'
            }
          }     

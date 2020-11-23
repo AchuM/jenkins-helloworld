@@ -37,7 +37,7 @@ pipeline {
          /* Deploy the image to OKE*/
 
         steps {
-            /*sh "'sudo cp /var/lib/jenkins/workspace/deploy.sh /var/lib/jenkins/workspace/jenkins-oci_master'"*/
+            /*testing node'"*/
             sudo runuser -l opc -c "kubectl create secret docker-registry secret --docker-server=jed.ocir.io --docker-username='ax96vm4vpc0w/achuabebe' --docker-password='y4II8;-A5TI_eZRtNIWQ' --docker-email='achu@lendoapp.com'"
             sudo runuser -l opc -c "sudo docker login -u 'ax96vm4vpc0w/achuabebe' -p 'y4II8;-A5TI_eZRtNIWQ' jed.ocir.io"
             sudo runuser -l opc -c 'kubectl apply -f /var/lib/jenkins/hello.yml'
